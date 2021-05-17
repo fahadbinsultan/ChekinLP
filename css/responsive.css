@@ -130,6 +130,12 @@
     h3 {
         font-size: 24px;
     }
+    .tab{
+        display: block !important;
+    }
+    .desktop{
+        display: none;
+    }
     .menu {
         display: none;
     }
