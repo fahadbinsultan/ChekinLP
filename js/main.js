@@ -142,7 +142,22 @@ $(document).ready(function(){
         }
     })
 
-    
+    // Home Video Popup
 
-    
+    var video = document.querySelector('.video-content');
+
+    $('.watch-video-button').on('click', function(e){
+        e.preventDefault()
+        video.play()
+        $('.video-popup').fadeIn()
+    })
+
+    $('.video-popup-content').on('click', function(e){
+
+        if( ! $(e.target).hasClass('video-content') ) {
+            video.pause()
+            video.currentTime = 0
+            $('.video-popup').fadeOut()
+        }
+    })
 })

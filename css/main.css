@@ -344,6 +344,43 @@ header {
 	-webkit-box-shadow: 0 2px 5px rgba(0,0,0,.2);
 	        box-shadow: 0 2px 5px rgba(0,0,0,.2);
 }
+.video-popup{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 99;
+    display: none;
+}
+.video-popup-content{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-popup-content-inner{
+	max-width: 1135px;
+	padding: 0 10px;
+}
+.video-popup-content-inner .close{
+	height: 36px;
+    width: 36px;
+    float: right;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.video-popup-content-inner .close:hover{
+	opacity: 1;
+}
+.video-popup-content-inner video{
+	max-width: 100%;
+}
 /* ##### Banner style starts here ##### */
 .banner {
 	padding: 180px 0 90px 0;
