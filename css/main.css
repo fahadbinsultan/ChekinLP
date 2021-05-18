@@ -597,6 +597,9 @@ header {
 	font-weight: bold;
 	color: #fff;
 }
+.status-item h3.counter .counter-animation{
+	display: inline-block;
+}
 .status-item p {
 	margin-top: 0;
 	color: #F5F5F5;

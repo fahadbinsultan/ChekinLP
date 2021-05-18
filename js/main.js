@@ -101,9 +101,12 @@ $(document).ready(function(){
     $('.counter-animation').each(function(){
         var $this = $(this),
             number = $this.text().replaceAll('.', ''),
-            len = number.length
+            len = number.length,
+            width = $this.width()
+
 
         numbers.push(number)
+        $this.css('width', width)
         $this.text(numberWithCommas(prefill('0', len, '0')))
     })
 
