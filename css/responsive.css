@@ -258,6 +258,12 @@
     .our-app-text-wrap {
         width: 50%;
     }
+    .home .banner-image-wrap {
+        width: 44%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
 }
 
 
@@ -485,6 +491,15 @@
     .our-app-text-wrap {
         width: 100%;
         margin: 20px 0 50px 0;
+    }
+    .home .banner-image-wrap {
+        width: 100%;
+        position: relative;
+        right: unset;
+        bottom: unset;
+    }
+    .bannar-brands {
+        padding: 25px;
     }
     
 }

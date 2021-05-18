@@ -546,6 +546,12 @@ header {
 .brand-carousel .owl-nav button.owl-next {
     right: -10px;
 }
+.home .banner-image-wrap {
+	width: 662px;
+}
+.home .banner-image-wrap img {
+	width: 100%;
+}
 
 /* ##### Main Service style starts here ##### */
 .main-service-wrapper {
