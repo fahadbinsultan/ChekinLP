@@ -1,37 +1,50 @@
-
 $(document).ready(function(){
 
-	$('.menu-trigger').on('click', function(){
-	    $('.menu').toggleClass('open-menu')
-	})
+    $('.menu-trigger').on('click', function(){
+        $('.nav-menu').toggleClass('open-menu')
+    })
 
-	// Header Scroll Animation
+    $('.nav-menu ul li.menu-item-has-children > a').on('click', function(e){
 
-	var headerFixedPosition = 100
+        e.preventDefault()
+        $(this).parent().toggleClass('open')
+    })
 
-	$(window).on('load scroll', function(){
-		if( $(window).scrollTop() > headerFixedPosition ) {
-			$('.header-wrapper').addClass('fixed')
-		}else{
-			$('.header-wrapper').removeClass('fixed')
-		}
-	})
+    // Language Toggle
 
-	// Review Carousel
+    $('.lang-login ul li.parent-item').hover(function(){
+        $(this).find('.sub-menu').fadeIn(200)
+    }, function(){
+        $(this).find('.sub-menu').fadeOut(200)
+    })
 
-	var reviewCarousel = $('.review-carousel')
+    // Header Scroll Animation
+
+    var headerFixedPosition = 100
+
+    $(window).on('load scroll', function(){
+        if( $(window).scrollTop() > headerFixedPosition ) {
+            $('.header-wrapper').addClass('fixed')
+        }else{
+            $('.header-wrapper').removeClass('fixed')
+        }
+    })
+
+    // Review Carousel
+
+    var reviewCarousel = $('.review-carousel')
     reviewCarousel.owlCarousel({
       loop: true,
       rewind: false,
       items: 3,
       nav: true,
-      navText: ["<img src='img/prev-icon.svg'>","<img src='img/next-icon.svg'>"],
+      navText: ["<img src='https://chekin.com/wp-content/themes/chekin2020/assets/images/prev-icon.svg'>","<img src='https://chekin.com/wp-content/themes/chekin2020/assets/images/next-icon.svg'>"],
       responsive: {
             0: {
-            	items: 1
+                items: 1
             },
             768: {
-            	items: 3
+                items: 3
             }
         }
     })
@@ -49,11 +62,11 @@ $(document).ready(function(){
     })
 
     $('body').on('click', '.left', function(){
-    	reviewCarousel.trigger('prev.owl.carousel')
+        reviewCarousel.trigger('prev.owl.carousel')
     })
 
     $('body').on('click', '.right', function(){
-    	owl.trigger('next.owl.carousel')
+        owl.trigger('next.owl.carousel')
     })
 
     // Brand Carousel
@@ -63,7 +76,7 @@ $(document).ready(function(){
       rewind: true,
       nav: true,
       dots: false,
-      navText: ["<img src='img/prev-icon.svg'>","<img src='img/next-icon.svg'>"],
+      navText: ["<img src='https://chekin.com/wp-content/themes/chekin2020/assets/images/prev-icon.svg'>","<img src='https://chekin.com/wp-content/themes/chekin2020/assets/images/next-icon.svg'>"],
       responsive: {
             0: {
                 items: 1

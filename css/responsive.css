@@ -82,6 +82,12 @@
     }
 }
 
+@media only screen and (max-width: 1050px) {
+ul.menu>li:last-child {
+    margin-left: 0;
+}
+}
+
 @media only screen and (max-width: 1045px) {
     .header-wrapper {
         width: 960px;
@@ -137,16 +143,101 @@
         display: block !important;
     }
     .desktop{
-        display: none;
+        display: none !important;
     }
-    .menu {
+
+
+
+    .nav-menu {
+        display: block;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        background: #fff;
+        width: 94%;
+        margin: 0 3%;
+        border-radius: 0 0 29px 20px;
+        padding-bottom: 20px;
         display: none;
+        -webkit-transition: width .3s, margin .3s, border-radius .3s;
+        -o-transition: width .3s, margin .3s, border-radius .3s;
+        transition: width .3s, margin .3s, border-radius .3s;
+        max-height: calc(100vh - 130px);
+        overflow-y: auto;
+    }
+    .fixed .nav-menu {
+        top: 80px;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        max-height: calc(100vh - 80px);
+    }
+    .nav-menu.open-menu{
+        display: block;
+    }
+    .nav-menu ul {
+        padding: 0 24px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column;
+    }
+    .nav-menu ul li a {
+        display: block;
+        padding: 8px 5px 10px;
+        margin-bottom: 5px;
+        border-bottom: 1px dashed #eee;
+        font-size: 19px;
+    }
+    .nav-menu ul li:last-child a {
+        display: block;
+        padding: 8px 5px;
+        border-bottom: 0px dashed #eee;
+    }
+
+
+
+    /*.nav-menu {
+        display: none;
+    }*/
+    .nav-menu ul.sub-menu{
+        position: relative;
+        box-shadow: none;
+        width: 100%;
+        transform: translateY(0);
+        padding: 0;
+        overflow: hidden;
+        max-height: 0;
+        left: 0;
+        opacity: 1;
+        transition: max-height 0.3s ease-in-out;
+    }
+    .nav-menu ul li.menu-item-has-children.open ul.sub-menu{
+        padding: 10px 25px 20px;
+        max-height: 500px;
+    }
+    .nav-menu ul li.menu-item-has-children:hover > a:after{
+        transform: rotate(0);
+    }
+    .nav-menu ul li.menu-item-has-children.open > a:after{
+        transform: rotate(180deg);
+        position: relative;
+        top: -1px;
+    }
+    .nav-menu ul.sub-menu li a {
+        height: 50px;
+        margin: 0;
+        font-size: 17px;
     }
     .menu-trigger {
         display: block;
     }
+    .lang-login ul li.parent-item a{
+        padding-bottom: 0;
+    }
     .header-wrapper {
         width: 94%;
+        padding: 20px 44px;
     }
     .banner-wrapper {
         width: 100%;
@@ -291,9 +382,9 @@
     .header-wrapper {
         padding: 15px 20px;
     }
-    .menu ul li a {
+    /*.nav-menu ul li a {
         font-size: 19px;
-    }
+    }*/
     .banner {
         padding: 120px 0 60px 0;
         position: relative;
@@ -388,7 +479,7 @@
     footer {
         padding: 75px 0 55px 0;
     }
-    .footer-top-account {
+    .footer-top-account ul {
         margin: 45px 0;
     }
     .logo img {
@@ -397,7 +488,13 @@
     header {
         z-index: 11;
     }
-    .menu {
+    .nav-menu {
+        top: 100px;
+    }
+    .nav-menu ul.menu{
+        padding: 0;
+    }
+    /*.nav-menu {
         display: block;
         position: absolute;
         top: 100px;
@@ -412,32 +509,32 @@
         -o-transition: width .3s, margin .3s, border-radius .3s;
         transition: width .3s, margin .3s, border-radius .3s;
     }
-    .fixed .menu {
+    .fixed .nav-menu {
         top: 80px;
         width: 100%;
         margin: 0;
         border-radius: 0;
     }
-    .menu.open-menu{
+    .nav-menu.open-menu{
         display: block;
     }
-    .menu ul {
+    .nav-menu ul {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-flow: column;
                 flex-flow: column;
     }
-    .menu ul li a {
+    .nav-menu ul li a {
         display: block;
         padding: 8px 5px 10px;
         margin-bottom: 5px;
         border-bottom: 1px dashed #eee;
     }
-    .menu ul li:last-child a {
+    .nav-menu ul li:last-child a {
         display: block;
         padding: 8px 5px;
         border-bottom: 0px dashed #eee;
-    }
+    }*/
     .review-section {
         background: url(../img/divider.png) no-repeat top center /100% 85px, transparent -o-linear-gradient(207deg, #2A63F5 0%, #215AF4 100%) 0% 0% no-repeat padding-box;
         background: url(../img/divider.png) no-repeat top center /100% 85px, transparent linear-gradient(243deg, #2A63F5 0%, #215AF4 100%) 0% 0% no-repeat padding-box;
@@ -501,7 +598,9 @@
     .bannar-brands {
         padding: 25px;
     }
-    
+    .lang-login ul.sub-menu {
+        top: 51px;
+    }
 }
 
 
